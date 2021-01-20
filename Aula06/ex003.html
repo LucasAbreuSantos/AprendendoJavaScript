@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 002</title>
+    <style>
+        body{
+            background-color: rgb(105, 105, 173);
+            color: white; /* Comentario em CSS */
+            font: normal 20px Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Olá mundo</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veritatis. Provident velit harum delectus, aperiam doloremque quis, veritatis iste, ducimus sint corporis animi voluptatibus impedit aliquam? Illum, eius. Corrupti, consequuntur!</p>
+    <!--
+        Number() = Transforma para Numero (Independente se é float ou Inteiro)
+        Number.parseFloat() = Transforma para numero Float
+        Number.parseInt()   = Transforma para numero Inteiro
+        String() = Transforma em String;
+        ${n...} é usada para intrepolar os valores colocando entre ``
+     -->
+    <script>
+        var n1 = Number(window.prompt('Digite um numero: '))
+        var n2 = Number(window.prompt('Digite outro numero: '))
+        var s  = n1 + n2
+        window.alert(`A soma de ${n1} e ${n2} é ${s}!`)
+        // (number '+' number) Adição
+        // (string '+' string ) concatenação
+    </script>
+
+</body>
+</html>
