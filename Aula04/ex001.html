@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro exercicio de JavaScript</title>
+    <!-- 
+        Estilos CSS Internos (Usados somente para a pagina em questão, podendo ser criados em arquivos separados usando a tag Link)
+    -->
+    <style>
+        Body{
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     
+    <h1>Olá, Mundo!</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, obcaecati nulla! Eum minus exercitationem eligendi repellat. Mollitia, ad delectus. Doloribus laudantium provident consequuntur quod fuga libero quidem fugiat necessitatibus esse.</p>    
+
+    <!-- 
+        Tag "Script" utilizada para rodar comandos JS, na propria página.
+        
+        Comandos: 
+        window.alert('mensagem') -> Exibe uma mensagem.
+        window.confirm('Esta gostando de JS?') -> Exibe uma mensagem com confirmação (Botão Ok e Cancel)
+        window.prompt('Qual o seu nome?') -> Exibe uma tela onde é possivel pegar uma informação digitada pelo usuario.
+
+        Obs: os comandos são CaseSensitive ou seja 
+        digita-los em minusculo ou maiusculo faz a diferença.
+
+    -->
+    <script>
+       window.alert('Minha primeira mensagem!') 
+       window.confirm('Está gostando de JS?')
+       window.prompt('Qual o seu nome?')
+    </script>
+
 </body>
 </html>
