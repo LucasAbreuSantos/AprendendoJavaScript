@@ -15,16 +15,45 @@
         Div#resultado{
             margin-top: 20px;
         }
+        .lampada{
+            width: 60px;
+            height: 70px;
+        }
     </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
+    <h1>Somando Valores <img src="../Midias/Imagens/LampadaAcessa.jpg" alt="Lampada acessa" class="lampada"> </h1>    
     <hr>
     <input type="number" name="txto1" id="txto1"> +
     <input type="number" name="txto2" id="txto2">
     <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="diminuir" id="inputDiminuir">
     <div id="resultado">Resultado...</div>
+    
     <script>
+        
+        //document.body.style.background = 'black'
+        //document.body.style.color = 'white'
+
+        var Dim = document.getElementById('inputDiminuir')
+        Dim.addEventListener('click',Diminui)
+
+        var lamp = document.getElementsByClassName('lampada')
+        lamp.addEventListener('click',Alterna)
+
+        function Alterna(){
+           document.body.style.background = 'black'
+           document.body.style.color = 'white'    
+        }
+
+        function Diminui(){
+            var tn1 = document.getElementById('txto1')
+            var tn2 = document.querySelector('input#txto2')
+            var res = document.getElementById('resultado')
+            var s = Number(tn1.value) - Number(tn2.value)
+            res.innerHTML = `O valor diminuido é: ${s}!`
+        }
+
         function somar(){
             var tn1 = document.getElementById('txto1')
             var tn2 = document.querySelector('input#txto2')
@@ -33,7 +62,7 @@
             var n1  = Number(tn1.value)
             var n2  = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `O valor de <code>${n1}</code> somado a <code>${n2}</code> é : <strong>${s}</strong>!`
+            res.innerHTML = `O valor de <code>${n1}</code> somado a <code>${n2}</code> é : <strong>${s}</strong>!`            
         }
     </script>
 </body>
