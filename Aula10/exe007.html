@@ -14,15 +14,12 @@
         }
         Div#resultado{
             margin-top: 20px;
-        }
-        .lampada{
-            width: 60px;
-            height: 70px;
-        }
+        }       
     </style>
 </head>
 <body>
-    <h1>Somando Valores <img src="../Midias/Imagens/LampadaAcessa.jpg" alt="Lampada acessa" class="lampada"> </h1>    
+    <h1>Somando Valores</h1>
+    <div id="Alterna"><img src="../Midias/Imagens/LampadaAcessa.jpg" alt="Lampada acessa"></div>
     <hr>
     <input type="number" name="txto1" id="txto1"> +
     <input type="number" name="txto2" id="txto2">
@@ -35,16 +32,16 @@
         //document.body.style.background = 'black'
         //document.body.style.color = 'white'
 
-        var Dim = document.getElementById('inputDiminuir')
-        Dim.addEventListener('click',Diminui)
+        var lamp = document.getElementsByID('Alterna')
+        lamp.addEventListener('click',Alternar)
 
-        var lamp = document.getElementsByClassName('lampada')
-        lamp.addEventListener('click',Alterna)
-
-        function Alterna(){
+        function Alternar(){
            document.body.style.background = 'black'
            document.body.style.color = 'white'    
         }
+
+        var Dim = document.getElementById('inputDiminuir')
+        Dim.addEventListener('click',Diminui)        
 
         function Diminui(){
             var tn1 = document.getElementById('txto1')
