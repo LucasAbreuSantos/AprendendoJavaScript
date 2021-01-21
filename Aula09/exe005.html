@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: cadetblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    
+    <div id="msg">Clique em mim!</div>
+    
+    <!-- 
+        Utilizando DOM
+        Forma de Acessar os elementos e altera-los
+        
+        -> document.getElementsByTagName('tag')[nr] TAG é a tag utilizada seja p - paragrafo ou qualquer outra e nr seria o indice dessa tag por exemplo 0 é a primeira ocorrencia dessa tag.
+        -> document.getElementsByID('msg') é o elemento onde o ID definido é 'msg',
+        entre outras formas..
+
+        Obs: pode-se adicionar essas tags a variaveis assim ficando um codigo mais limpo (visivelmente no fonte).
+
+    -->
+    <script>
+        
+        var p1 = window.document.getElementsByTagName('p')[1]        
+        
+        document.body.style.backgroundColor = 'Black'
+        
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aprendendo'
+
+        var a = document.querySelector('Div#msg')
+        a.style.background = 'white'
+        a.style.color = 'black'
+        a.innerText = 'Valor alterado'
+        
+    </script>
+</body>
+</html>

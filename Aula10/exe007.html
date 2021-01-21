@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;            
+        }
+        Div#resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <hr>
+    <input type="number" name="txto1" id="txto1"> +
+    <input type="number" name="txto2" id="txto2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado">Resultado...</div>
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txto1')
+            var tn2 = document.querySelector('input#txto2')
+            // window.alert(Number(tn1.value) + Number(tn2.value)) -> Mostra um alerta com a soma ja feita (hehe)
+            var res = document.getElementById('resultado')
+            var n1  = Number(tn1.value)
+            var n2  = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `O valor de <code>${n1}</code> somado a <code>${n2}</code> é : <strong>${s}</strong>!`
+        }
+    </script>
+</body>
+</html>

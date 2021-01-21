@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        Div{
+            font: normal 15pt Arial ;
+            background: rgb(57, 165, 57);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; 
+            text-align: center;            
+        }
+    </style>
+</head>
+<body>
+    <!-- Adiciona os eventos na própria TAG "Forma 1"-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <br>
+    <!-- 
+        Não necessita dos eventos na tag pois sera tratado no proprio javascript somente necessario localiza-la pelo 
+        ID,Name,Class,Tag ou etc.. usando GetElementBy(ID,NAME,CLASS,ETC...) ou GetElementsByTag
+    -->
+    <div id="area1">
+        Interaja 2...
+    </div>    
+    <script>
+        // Utiliza a função de acordo com o evento configurada na tag - "Forma 1"
+        function clicar(){
+            var a = document.getElementById('area')
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            var a = document.getElementById('area')
+            a.innerText = 'Entrou'            
+        }
+        function sair(){
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+        // Cria uma variavel onde estara armazenada o tag
+        // Lembrar de não usar o 'ON' na frente ao usar o addEventListener ex: click e nao onclick
+        var b = document.getElementById('area1')
+        b.addEventListener('click',clicar1)
+        b.addEventListener('mouseenter',entrar1) 
+        b.addEventListener('mouseout',sair1)
+       
+        function clicar1(){            
+            b.innerText = 'Clicou'
+            b.style.background = 'red'
+        }
+        function entrar1(){            
+            b.innerText = 'Entrou'            
+        }
+        function sair1(){            
+            b.innerText = 'Saiu'
+            b.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
