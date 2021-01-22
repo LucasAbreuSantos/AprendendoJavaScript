@@ -1,17 +1,22 @@
 body{
-    background-color: rgb(53, 53, 53);
-    color: white;
-    font: normal 20px Arial;
+    background-color: white;
+    color: black;
+    font: normal 20px Arial;    
 }
 h1{
     text-align: center;
 }
 p{
     font: normal 15px Arial;
+    text-align: justify;
 }       
 .Centralizar{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center
+}
+#lampada{
+    width: 30px;
+    height: 30px;
 }

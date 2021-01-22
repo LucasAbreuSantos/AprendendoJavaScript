@@ -8,7 +8,7 @@
     <title>Navegação do Conteudo</title>    
 </head>
 <body>
-    <h1>Página para Navegação...</h1>
+    <h1>Página para Navegação... <img src="Midias/Imagens/LampadaAcessa.jpg" alt="Lampada Acessa" id="lampada"></h1>
     <hr>
     <h2>Descrição do Site</h2>
     <p>
@@ -21,13 +21,22 @@
             <img src="Midias/Imagens/CursoJavascript.png" alt="Imagem CursoJavascript">
         </picture> 
     </a><br>
-    <cite>Clique na imagem e veja um exemplo!</cite>   
+    <p style="text-align: center;">Clique na imagem e veja um exemplo!</p><br>   
     <p>
          Site Desenvolvido atraves do aprendizado dos Cursos de Html5/CSS3 e JavaScript do professor <strong>Gustavo Guanabara<strong> &#x1f60e!
     </p>
     <script>
-        var nome = window.prompt('Qual é o seu nome?')
-        document.write(`Bem vindo ao Site: ${nome}!`)
+        var lampada = window.document.getElementById('lampada')
+        lampada.addEventListener('click',interruptor)
+        function interruptor(){
+            if(window.document.body.style.background != 'black'){
+                window.document.body.style.background = 'black'
+                window.document.body.style.color = 'white'
+            }else{
+                window.document.body.style.background = 'white'
+                window.document.body.style.color = 'black' 
+            }
+        }
     </script>        
 </body>
 </html>
