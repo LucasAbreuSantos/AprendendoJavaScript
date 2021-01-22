@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema</h1>
+    <hr>
+    
+    Velocidade: <input type="text" id="vel">
+                <input type="button" value="Calcular" id="calc">
+                <img src="../Midias/Imagens/LampadaAcessa.jpg" alt="lamp" id="lampada">
+    <div id="res">
+
+    </div>
+    
+    <script>
+       
+        var calc = window.document.getElementById('calc')
+        calc.addEventListener('click',calcular)
+        function calcular(){
+            var velocidade = window.document.getElementById('vel') 
+            var vel = Number(velocidade.value)
+            var resp = window.document.getElementById('res')
+            if(vel > 100){
+                resp.innerHTML = `A velocidade de ${vel}km/h, está acima do permitido de 100km/h!`
+            }else{
+                resp.innerHTML = `A velocidade de ${vel}km/h, está adequada!`
+            }
+            resp.innerHTML += `<br>Atenção ao dirigir!`
+        }
+
+        var desligar = window.document.getElementById('lampada')
+        desligar.addEventListener('click',desliga)
+        function desliga(){
+            if(window.document.body.style.background != 'black' ){
+                
+                window.document.body.style.background = 'black'
+                window.document.body.style.color = 'white'
+
+            }else{
+                
+                window.document.body.style.background = 'white' 
+                window.document.body.style.color = 'black'
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
