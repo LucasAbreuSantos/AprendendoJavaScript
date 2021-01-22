@@ -22,8 +22,9 @@
     </style>
 </head>
 <body>
+    
     <h1>Somando Valores</h1>
-    <div onclick="Alternar()"><img src="../Midias/Imagens/LampadaAcessa.jpg" alt="Lampada acessa" id="Alterna"></div>
+    <div><img src="../Midias/Imagens/LampadaAcessa.jpg" alt="Lampada acessa" id="Alterna"></div>
     <hr>
     <input type="number" name="txto1" id="txto1"> +
     <input type="number" name="txto2" id="txto2">
@@ -40,28 +41,33 @@
         Dim.addEventListener('click',Diminui)        
 
         function Diminui(){
-            var tn1 = document.getElementById('txto1')
-            var tn2 = document.querySelector('input#txto2')
-            var res = document.getElementById('resultado')
+            var tn1 = window.document.getElementById('txto1')
+            var tn2 = window.document.querySelector('input#txto2')
+            var res = window.document.getElementById('resultado')
             var s = Number(tn1.value) - Number(tn2.value)
             res.innerHTML = `O valor diminuido é: ${s}!`
         }
 
         function somar(){
-            var tn1 = document.getElementById('txto1')
-            var tn2 = document.querySelector('input#txto2')
+            var tn1 = window.document.getElementById('txto1')
+            var tn2 = window.document.querySelector('input#txto2')
             // window.alert(Number(tn1.value) + Number(tn2.value)) -> Mostra um alerta com a soma ja feita (hehe)
-            var res = document.getElementById('resultado')
+            var res = window.document.getElementById('resultado')
             var n1  = Number(tn1.value)
             var n2  = Number(tn2.value)
             var s = n1 + n2
             res.innerHTML = `O valor de <code>${n1}</code> somado a <code>${n2}</code> é : <strong>${s}</strong>!`            
         }       
 
-        function Alternar(){          
-             document.body.style.background = 'black'
-             document.body.style.color = 'white'                                
-        }
+        var alt = window.document.getElementById('Alterna')
+        alt.addEventListener('click',Alternar)
+
+        function Alternar(){ 
+
+             window.document.body.style.background = 'black'
+             window.document.body.style.color = 'white'            
+                                                          
+        }       
 
     </script>
 </body>
