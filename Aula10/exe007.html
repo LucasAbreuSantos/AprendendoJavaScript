@@ -30,16 +30,8 @@
     <script>
         
         //document.body.style.background = 'black'
-        //document.body.style.color = 'white'
-
-        var lamp = document.getElementsByID('Alterna')
-        lamp.addEventListener('click',Alternar)
-
-        function Alternar(){
-           document.body.style.background = 'black'
-           document.body.style.color = 'white'    
-        }
-
+        //document.body.style.color = 'white'  
+        
         var Dim = document.getElementById('inputDiminuir')
         Dim.addEventListener('click',Diminui)        
 
@@ -61,6 +53,15 @@
             var s = n1 + n2
             res.innerHTML = `O valor de <code>${n1}</code> somado a <code>${n2}</code> é : <strong>${s}</strong>!`            
         }
+
+        var lamp = document.getElementsByID('Alterna')
+        lamp.addEventListener('click',Alternar)
+
+        function Alternar(){
+           document.body.style.background = 'black'
+           document.body.style.color = 'white'    
+        }
+
     </script>
 </body>
 </html>
